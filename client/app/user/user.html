@@ -1,0 +1,94 @@
+<div class="modal-header">
+  <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="close($event)"><span aria-hidden="true">Close&times;</span></button>-->
+  <h4 class="modal-title text-success text-center">プロフィール</h4>
+</div>
+<div class="modal-body">
+  <div class="media">
+    <div class="media-left">
+      <img class="media-object img-rounded img-avatar" src="{{user.avatar}}" alt="48x48">
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        {{user.name}}
+        <small>{{user.pronounce}}</small>
+      </h4>
+      <p>{{user.pr}}</p>
+    </div>
+  </div>
+  
+  <hr>
+  <div class="media">
+    <div class="media-left">
+      <!--<span class="glyphicon glyphicon-home"></span>-->
+    </div>
+    <div class="media-body">
+      <h5 class="media-left">
+        性別
+        <small>{{user.sex}}</small>
+      </h5>
+    </div>
+  </div>
+  <hr>
+  <div class="media">
+    <div class="media-left">
+      <!--<span class="glyphicon glyphicon-home"></span>-->
+    </div>
+    <div class="media-body">
+      <h5 class="media-left">
+        居住地
+        <small>{{user.residence}}</small>
+      </h5>
+    </div>
+  </div>
+  <hr>
+  <div class="media">
+    <div class="media-left">
+      <!--<span class="glyphicon glyphicon-envelope"></span>-->
+    </div>
+    <div class="media-body">
+      <h5 class="media-left">
+        連絡先
+        <small>{{user.social.email}}</small>
+      </h5>
+    </div>
+  </div>
+  
+  <!--
+  <div class="list-group">
+    <div class="list-group-item">
+      <div class="media">
+        <div class="media-left">
+          <span class="glyphicon glyphicon-home"></span>
+        </div>
+        <div class="media-body">
+          <h4 class="media-left">
+            居住地
+            <small>{{user.residence}}</small>
+          </h4>
+        </div>
+      </div>
+    </div>
+    
+    <div class="list-group-item">
+      <div class="media">
+        <div class="media-left">
+          <span class="glyphicon glyphicon-envelope"></span>
+        </div>
+        <div class="media-body">
+          <h4 class="media-left">
+            連絡先
+            <small>{{user.social.email}}</small>
+          </h4>
+        </div>
+      </div>
+    </div>
+    -->
+    
+  </div>
+  <!-- /.list-group -->
+</div>
+<!-- /.modal-body -->
+
+<div class="modal-footer">
+</div>

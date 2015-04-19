@@ -21,12 +21,15 @@
     <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
       <link rel="stylesheet" href="app/app.css">
+      <link rel="stylesheet" href="app/list/list.css">
       <link rel="stylesheet" href="app/main/main.css">
+      <link rel="stylesheet" href="app/splash/splash.css">
+      <link rel="stylesheet" href="app/user/user.css">
       <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
-  <body ng-app="aircomApp">
+  <body ng-app="aircommApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -65,8 +68,17 @@
         <!-- build:js({.tmp,client}) app/app.js -->
         <script src="app/app.js"></script>
           <!-- injector:js -->
+          <script src="app/list/list.controller.js"></script>
+          <script src="app/list/list.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
+          <script src="app/splash/splash.controller.js"></script>
+          <script src="app/splash/splash.js"></script>
+          <script src="app/testService/testService.service.js"></script>
+          <script src="app/user/user.controller.js"></script>
+          <script src="app/user/user.js"></script>
+          <script src="app/userManager/userManager.service.js"></script>
+          <script src="components/airnavbar/airnavbar.controller.js"></script>
           <script src="components/modal/modal.service.js"></script>
           <script src="components/navbar/navbar.controller.js"></script>
           <!-- endinjector -->

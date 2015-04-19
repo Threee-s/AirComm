@@ -1,0 +1,148 @@
+<div ng-controller="ListCtrl">
+  <!--<div ng-include="'components/airnavbar/airnavbar.html'"></div>-->
+<div class="navbar navbar-defulat navbar-inverse navbar-static-top navbar-tools"><!--少し右にずれるな-->
+  <!--<div class="navbar navbar-defulat navbar-static-bottom navbar-tools">-->
+  <div class="container">
+    <div class="navbar-header">
+      <!--
+      <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      -->
+      <a href="/" class="navbar-brand">AirComm</a>
+    </div>
+		<div class="navbar-collapse collapse">
+		  <img class="img-responsive user-reflesh" ng-src="{{update.progress}}" ng-show="{{update.connecting}}" alt="24x34">
+		  <!--
+		  
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a class="glyphicon glyphicon-user"></a>
+				</li>
+				<li>
+					<a class="glyphicon glyphicon-reflesh"></a>
+				</li>
+			</ul>
+			-->
+			<!--
+			<form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search" ng-model="searchUser">
+				</div>
+			</form>
+			-->
+		</div>
+	</div>
+</div>
+
+
+<!-- Modal for user -->
+<!--
+<script type="text/ng-template" id="modal-user">
+        
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title text-success text-center">プロフィール</h4>
+  </div>
+  <div class="modal-body">
+    <div class="media">
+      <div class="media-left">
+        <img class="media-object img-rounded" src="{{user.avatar}}" alt="48x48">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">
+          {{user.name}}
+          <small>{{user.pronounce}}</small>
+        </h4>
+        <p>{{user.pr}}</p>
+      </div>
+    </div>
+    
+    <div class="list-group">
+      <div class="list-group-item">
+        <div class="media">
+          <div class="media-left">
+            <span class="glyphicon glyphicon-home"></span>
+          </div>
+          <div class="media-body">
+            <h4 class="media-left">
+              居住地
+              <small>{{user.residence}}</small>
+            </h4>
+          </div>
+        </div>
+      </div>
+      
+      <div class="list-group-item">
+        <div class="media">
+          <div class="media-left">
+            <span class="glyphicon glyphicon-envelope"></span>
+          </div>
+          <div class="media-body">
+            <h4 class="media-left">
+              連絡先
+              <small>{{user.social.email}}</small>
+            </h4>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="modal-footer">
+  </div>
+</script>
+-->
+  
+  <div class="container">
+    <div class="alert alert-dismissible" role="alert" ng-show="false">
+      <!--<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+      <div class="row text-center">
+        <img class="img-responsive center-block" ng-src="{{update.progress}}" alt="24x34">
+      </div>
+    </div>
+
+    <div ng-init="initUsers()">
+      <div ng-repeat="user in users | filter:searchUser">
+        <!--<a ui-sref="user({id:user.id})">-->
+        <a ng-click="showUser($index)">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object img-rounded img-avatar" ng-src="{{user.avatar}}" alt="48x48">
+            </div>
+            <div class="media-body">
+              <h4 class="media-middle" ng-bind="user.name">
+                <small ng-bind="user.pronounce"></small>
+              </h4>
+              <hr>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <button type="button" class="btn btn-info btn-block" ng-click="updateUsers()">
+      更新
+    </button>
+  </div>
+
+</div>
+
+
+<div class="navbar navbar-defulat navbar-fixed-bottom">
+  <div class="container">
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<p>Air Communication v0.0.1 |
+  					<a href="https://github.com/Threee-s/AirComm/issues?state=open">Issues</a>
+  				</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
